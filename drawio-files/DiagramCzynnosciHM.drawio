@@ -1,0 +1,260 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="ActivityDiagramWyloty" name="Diagram Czynnosci - Wyloty">
+    <mxGraphModel dx="1715" dy="954" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pool" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;horizontal=0;horizontalStack=1;" value="Planowania i tworzenie wylotów" vertex="1">
+          <mxGeometry height="1500" width="1000" x="40" y="40" as="geometry">
+            <mxRectangle height="240" width="40" x="40" y="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lane_ks" parent="pool" style="swimlane;startSize=20;horizontal=1;" value="Kierownik skoków" vertex="1">
+          <mxGeometry height="1500" width="300" x="20" as="geometry">
+            <mxRectangle height="1500" width="40" x="20" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="start_node" parent="lane_ks" style="ellipse;fillColor=#000000;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="135" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act1" parent="lane_ks" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Zaplanowanie nowego wylotu" vertex="1">
+          <mxGeometry height="40" width="140" x="80" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="lane_ks" source="start_node" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act4" parent="lane_ks" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Wybór pilota i samolotu" vertex="1">
+          <mxGeometry height="40" width="140" x="80" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="act7" parent="lane_ks" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Wprowadzenie danych lotu (godzina, trasa)" vertex="1">
+          <mxGeometry height="40" width="140" x="90" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="dec2" parent="lane_ks" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="Dodaj&lt;div&gt;kolejnego skoczka?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="90" x="110" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="act9" parent="lane_ks" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Wybór skoczka (idSkoczka)" vertex="1">
+          <mxGeometry height="40" width="140" x="85" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_dec2_tak" edge="1" parent="lane_ks" source="dec2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act9" value="[Tak]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act14" parent="lane_ks" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Zatwierdzenie utworzenia wylotu" vertex="1">
+          <mxGeometry height="40" width="140" x="80" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_dec2_nie" edge="1" parent="lane_ks" source="dec2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="act14" value="[Nie]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="655" />
+              <mxPoint x="40" y="1280" />
+            </Array>
+            <mxPoint x="240" y="630" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act16" parent="lane_ks" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Rozpoczęcie briefingu" vertex="1">
+          <mxGeometry height="40" width="140" x="80" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="note2" parent="lane_ks" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;&lt;br&gt;Prowadzenie briefingu" vertex="1">
+          <mxGeometry height="60" width="115" x="10" y="1420" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_note2" edge="1" parent="lane_ks" source="act16" style="endArrow=none;dashed=1;html=1;" target="note2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_sys" parent="pool" style="swimlane;startSize=20;horizontal=1;" value="System / Baza Danych" vertex="1">
+          <mxGeometry height="1500" width="380" x="320" as="geometry" />
+        </mxCell>
+        <mxCell id="act2" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Utworzenie planu wylotu" vertex="1">
+          <mxGeometry height="40" width="140" x="120" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="act5" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Sprawdzenie ważności licencji pilota" vertex="1">
+          <mxGeometry height="40" width="140" x="120" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="dec1" parent="lane_sys" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="Licencja&lt;br&gt;ważna?" vertex="1">
+          <mxGeometry height="80" width="80" x="150" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="lane_sys" source="act5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dec1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_err1" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Wyświetlenie komunikatu o błędzie" vertex="1">
+          <mxGeometry height="40" width="120" x="20" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_dec1_nie" edge="1" parent="lane_sys" source="dec1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="act_err1" value="[Nie]">
+          <mxGeometry relative="1" x="-0.2" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="80" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act6" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Pobranie pojemności samolotu" vertex="1">
+          <mxGeometry height="40" width="140" x="220" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_dec1_tak" edge="1" parent="lane_sys" source="dec1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="act6" value="[Tak]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="260" y="380" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act8" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Walidacja danych i zatwierdzenie" vertex="1">
+          <mxGeometry height="40" width="140" x="120" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="act10" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Pobranie danych i sprawdzenie uprawnień" vertex="1">
+          <mxGeometry height="40" width="140" x="120" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="note1" parent="lane_sys" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;&lt;br&gt;Kontrola uprawnień skoczków" vertex="1">
+          <mxGeometry height="70" width="115" x="132.5" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_note1" edge="1" parent="lane_sys" source="act10" style="endArrow=none;dashed=1;html=1;" target="note1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dec3" parent="lane_sys" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="Uprawnienia&lt;br&gt;ważne?" vertex="1">
+          <mxGeometry height="90" width="90" x="145" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" edge="1" parent="lane_sys" source="act10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dec3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act11" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Przypisanie skoczka do wylotu" vertex="1">
+          <mxGeometry height="40" width="140" x="220" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_dec3_tak" edge="1" parent="lane_sys" source="dec3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="act11" value="[Tak]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="290" y="845" />
+            </Array>
+            <mxPoint x="300" y="840" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act12" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Zwiększenie licznika skoczków" vertex="1">
+          <mxGeometry height="40" width="140" x="220" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" edge="1" parent="lane_sys" source="act11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dec4" parent="lane_sys" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="Samolot&lt;br&gt;pełny?" vertex="1">
+          <mxGeometry height="80" width="80" x="90" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" edge="1" parent="lane_sys" source="act12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="dec4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="990" />
+            </Array>
+            <mxPoint x="280" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act13" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Wyświetlenie komunikatu &quot;Samolot pełny&quot;" vertex="1">
+          <mxGeometry height="40" width="140" x="60" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_dec4_tak" edge="1" parent="lane_sys" source="dec4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act13" value="[Tak]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_dec4_nie_join" edge="1" parent="lane_sys" source="dec4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="[Nie]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-40" y="1080" />
+            </Array>
+            <mxPoint x="-40" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act15" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Zmiana statusu wylotu na PLANOWANY i zapis" vertex="1">
+          <mxGeometry height="40" width="140" x="110" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="lane_sys" source="act2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="act4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="180" />
+              <mxPoint x="-150" y="180" />
+            </Array>
+            <mxPoint x="190" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act_err2" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Wyświetlenie komunikatu o błędzie" vertex="1">
+          <mxGeometry height="40" width="120" x="25" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_dec3_nie" edge="1" parent="lane_sys" source="dec3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="act_err2" value="[Nie]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="100" y="800" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lane_sk" parent="pool" style="swimlane;startSize=20;horizontal=1;" value="Skoczek" vertex="1">
+          <mxGeometry height="1500" width="300" x="700" as="geometry" />
+        </mxCell>
+        <mxCell id="act17" parent="lane_sk" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#FFFFFF;strokeColor=#000000;" value="Potwierdzenie uczestnictwa" vertex="1">
+          <mxGeometry height="40" width="140" x="80" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="end_node" parent="lane_sk" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="135" y="1460" as="geometry" />
+        </mxCell>
+        <mxCell id="edge18" edge="1" parent="lane_sk" source="act17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end_node" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="pool" source="act1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;" target="act2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="pool" source="act4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="pool" source="act6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="act7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="pool" source="act7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="act8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="510" />
+              <mxPoint x="510" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="pool" source="act8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="dec2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="580" />
+              <mxPoint x="175" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge10" edge="1" parent="pool" source="act9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge15" edge="1" parent="pool" source="act14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge16" edge="1" parent="pool" source="act15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="act16" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="1330" />
+              <mxPoint x="170" y="1330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge17" edge="1" parent="pool" source="act16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XxE6g0xwvNWkcLY4vMX--3" edge="1" parent="pool" source="act_err1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="act4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XxE6g0xwvNWkcLY4vMX--6" edge="1" parent="pool" source="act_err2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="dec2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="920" />
+              <mxPoint x="280" y="655" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_act13_join" edge="1" parent="pool" source="act13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="act14" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="1180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
