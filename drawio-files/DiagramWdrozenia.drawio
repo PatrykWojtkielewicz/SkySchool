@@ -1,0 +1,154 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Diagram Wdrozenia: SkySchool" id="WdrozenieSkySchool">
+    <mxGraphModel dx="1372" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n_pc" parent="1" style="shape=cube;whiteSpace=wrap;html=1;size=10;verticalAlign=top;align=center;container=1;collapsible=0;spacingTop=6;" value="«device»&lt;br&gt;Komputer kierownika[1..2]" vertex="1">
+          <mxGeometry height="125" width="250" x="50" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="c_manifest" parent="n_pc" style="shape=component;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;" value="«exe»&lt;br&gt;Aplikacja kierownictwa&amp;nbsp;" vertex="1">
+          <mxGeometry height="62.50000000000001" width="195" x="30" y="45.45454545454546" as="geometry" />
+        </mxCell>
+        <mxCell id="n_tablet" parent="1" style="shape=cube;whiteSpace=wrap;html=1;size=10;verticalAlign=top;align=center;container=1;collapsible=0;spacingTop=6;" value="«device»&lt;br&gt;Tablet pilota [1..3]" vertex="1">
+          <mxGeometry height="130" width="250" x="50" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="c_pilot" parent="n_tablet" style="shape=component;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;" value="«exe»&#xa;Aplikacja pilota" vertex="1">
+          <mxGeometry height="65" width="195" x="30" y="47.27272727272727" as="geometry" />
+        </mxCell>
+        <mxCell id="n_phone" parent="1" style="shape=cube;whiteSpace=wrap;html=1;size=10;verticalAlign=top;align=center;container=1;collapsible=0;spacingTop=5;" value="«device»&lt;br&gt;Smartfon ukladacza/riggera [1..5]" vertex="1">
+          <mxGeometry height="120" width="250" x="80" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c_packer" parent="n_phone" style="shape=component;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacingTop=2;" value="«exe»&lt;br&gt;Aplikacja ukladacza/riggera" vertex="1">
+          <mxGeometry height="60" width="220" x="20" y="43.64" as="geometry" />
+        </mxCell>
+        <mxCell id="n_kiosk" parent="1" style="shape=cube;whiteSpace=wrap;html=1;size=10;verticalAlign=top;align=center;container=1;collapsible=0;spacingTop=6;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;«device»&lt;/span&gt;&lt;/div&gt;Smartfon skoczka [1..20]" vertex="1">
+          <mxGeometry height="127" width="250" x="216" y="456.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c_kiosk" parent="n_kiosk" style="shape=component;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;" value="«exe»&#xa;Aplikacja skoczka" vertex="1">
+          <mxGeometry height="63.5" width="195" x="30" y="46.18181818181817" as="geometry" />
+        </mxCell>
+        <mxCell id="n_tv" parent="1" style="shape=cube;whiteSpace=wrap;html=1;size=10;verticalAlign=top;align=center;container=1;collapsible=0;spacingTop=5;" value="«device»&#xa;Telewizor w hangarze [1..2]" vertex="1">
+          <mxGeometry height="120" width="250" x="510" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="c_display" parent="n_tv" style="shape=component;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;" value="«exe»&#xa;Tablica wylotow" vertex="1">
+          <mxGeometry height="59.99999999999999" width="195" x="30" y="43.63636363636363" as="geometry" />
+        </mxCell>
+        <mxCell id="i_ks" parent="1" style="ellipse;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" value="IKierownikSkokow" vertex="1">
+          <mxGeometry height="26" width="26" x="440" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="i_pil" parent="1" style="ellipse;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" value="IPilot" vertex="1">
+          <mxGeometry height="26" width="26" x="440" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="i_ur" parent="1" style="ellipse;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" value="IUkladaczRigger" vertex="1">
+          <mxGeometry height="26" width="26" x="440" y="119.5" as="geometry" />
+        </mxCell>
+        <mxCell id="i_sk" parent="1" style="ellipse;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" value="ISkoczek" vertex="1">
+          <mxGeometry height="26" width="26" x="440" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="i_sw" parent="1" style="ellipse;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" value="ISystemWyswietlania" vertex="1">
+          <mxGeometry height="26" width="26" x="650" y="274" as="geometry" />
+        </mxCell>
+        <mxCell id="n_app" parent="1" style="shape=cube;whiteSpace=wrap;html=1;size=12;verticalAlign=top;align=center;container=1;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;spacingTop=12;" value="«device»&#xa;Serwer aplikacji [1]&#xa;8x CPU, 16 GB RAM, SSD" vertex="1">
+          <mxGeometry height="215" width="330" x="520" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="c_app" parent="n_app" style="shape=component;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;" value="«exe»&#xa;Serwer aplikacji" vertex="1">
+          <mxGeometry height="57.88461538461538" width="260" x="35" y="90.96153846153845" as="geometry" />
+        </mxCell>
+        <mxCell id="i_db" parent="1" style="ellipse;whiteSpace=wrap;html=1;verticalLabelPosition=top;verticalAlign=bottom;" value="IOdczyt/IZapis" vertex="1">
+          <mxGeometry height="26" width="26" x="910" y="147.85" as="geometry" />
+        </mxCell>
+        <mxCell id="n_db" parent="1" style="shape=cube;whiteSpace=wrap;html=1;size=12;verticalAlign=top;align=center;container=1;collapsible=0;spacingTop=6;" value="«device»&#xa;Serwer bazy danych [1]&#xa;4x CPU, 8 GB RAM, HDD" vertex="1">
+          <mxGeometry height="140" width="290" x="990" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c_db" parent="n_db" style="shape=component;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;" value="«db»&lt;br&gt;Baza danych" vertex="1">
+          <mxGeometry height="49" width="232" x="29" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="n_backup" parent="1" style="shape=cube;whiteSpace=wrap;html=1;size=10;verticalAlign=top;align=center;container=1;collapsible=0;spacingTop=5;" value="«device»&lt;br&gt;Archiwum kopii zapasowych" vertex="1">
+          <mxGeometry height="140" width="290" x="990" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="c_bkp" parent="n_backup" style="shape=component;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;" value="«db»&#xa;Kopia zapasowa" vertex="1">
+          <mxGeometry height="70" width="222.33333333333334" x="33.833333333333336" y="52.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p_ks" edge="1" parent="1" source="c_app" style="endArrow=none;html=1;rounded=0;" target="i_ks">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p_pil" edge="1" parent="1" source="c_app" style="endArrow=none;html=1;rounded=0;" target="i_pil">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p_ur" edge="1" parent="1" source="c_app" style="endArrow=none;html=1;rounded=0;" target="i_ur">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p_sk" edge="1" parent="1" source="c_app" style="endArrow=none;html=1;rounded=0;" target="i_sk">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p_sw" edge="1" parent="1" source="c_app" style="endArrow=none;html=1;rounded=0;" target="i_sw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_pc" edge="1" parent="1" source="c_manifest" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;" target="i_ks" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_tablet" edge="1" parent="1" source="c_pilot" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;" target="i_pil" value="">
+          <mxGeometry relative="1" x="0.0055" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r_phone" edge="1" parent="1" source="c_packer" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;" target="i_ur" value="">
+          <mxGeometry relative="1" x="0.1258" y="7" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r_kiosk" edge="1" parent="1" source="c_kiosk" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;" target="i_sk" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_tv" edge="1" parent="1" source="c_display" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;" target="i_sw" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pd_db" edge="1" parent="1" source="c_db" style="endArrow=none;html=1;rounded=0;" target="i_db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rd_db" edge="1" parent="1" source="c_app" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;" target="i_db" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_backup" edge="1" parent="1" source="n_db" style="endArrow=none;endFill=0;html=1;rounded=0;" target="n_backup" value="«Ethernet»">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3t8-i_9W50pND9O8Vr5P-31" edge="1" parent="1" source="n_db" style="endArrow=none;endFill=0;html=1;rounded=0;exitX=-0.01;exitY=0.102;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.256;entryDx=0;entryDy=0;entryPerimeter=0;" target="n_app" value="«Ethernet»">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="960" y="180" as="sourcePoint" />
+            <mxPoint x="960" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3t8-i_9W50pND9O8Vr5P-32" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" value="Internet" vertex="1">
+          <mxGeometry height="80" width="120" x="440" y="274" as="geometry" />
+        </mxCell>
+        <mxCell id="3t8-i_9W50pND9O8Vr5P-33" edge="1" parent="1" source="3t8-i_9W50pND9O8Vr5P-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.996;entryY=0.84;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.25;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;" target="n_pc">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="270" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3t8-i_9W50pND9O8Vr5P-34" edge="1" parent="1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=250;entryDy=70;entryPerimeter=0;endArrow=none;endFill=0;" target="n_tablet">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="310" as="sourcePoint" />
+            <mxPoint x="390" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3t8-i_9W50pND9O8Vr5P-36" edge="1" parent="1" source="n_phone" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=250;exitDy=65;exitPerimeter=0;entryX=0.13;entryY=0.77;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="3t8-i_9W50pND9O8Vr5P-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3t8-i_9W50pND9O8Vr5P-37" edge="1" parent="1" source="n_kiosk" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=240;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0.963;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="3t8-i_9W50pND9O8Vr5P-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3t8-i_9W50pND9O8Vr5P-38" edge="1" parent="1" source="3t8-i_9W50pND9O8Vr5P-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.8;exitY=0.8;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.244;entryY=-0.008;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="n_tv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3t8-i_9W50pND9O8Vr5P-39" edge="1" parent="1" source="n_app" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=12;exitDy=215;exitPerimeter=0;entryX=0.625;entryY=0.2;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="3t8-i_9W50pND9O8Vr5P-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
