@@ -1,24 +1,24 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Diagram Przebiegu: Tworzenie Wylotów" id="TworzenieWylotowDiagram">
-    <mxGraphModel dx="2772" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1800" math="0" shadow="0">
+    <mxGraphModel dx="3115" dy="2754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1800" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="ks_head" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Kierownik skoków" vertex="1">
-          <mxGeometry height="60" width="30" x="65" y="40" as="geometry" />
+          <mxGeometry height="60" width="30" x="65" y="-20" as="geometry" />
         </mxCell>
         <mxCell id="ks_line" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="80" y="1650" as="sourcePoint" />
-            <mxPoint x="80" y="120" as="targetPoint" />
+            <mxPoint x="80" y="60" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ui_head" parent="1" style="html=1;whiteSpace=wrap;" value=": System" vertex="1">
+        <mxCell id="ui_head" parent="1" style="html=1;whiteSpace=wrap;" value=": FormularzWylotu" vertex="1">
           <mxGeometry height="40" width="160" x="220" y="50" as="geometry" />
         </mxCell>
         <mxCell id="ui_line" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="300" y="1650" as="sourcePoint" />
+            <mxPoint x="300" y="1540" as="sourcePoint" />
             <mxPoint x="300" y="90" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -154,10 +154,10 @@
         <mxCell id="note_briefing" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=10;align=center;verticalAlign=middle;backgroundOutline=1;darkOpacity=0.05;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt; Prowadzenie briefingu" vertex="1">
           <mxGeometry height="30" width="200" x="320" y="1520" as="geometry" />
         </mxCell>
-        <mxCell id="m1" edge="1" parent="1" style="edgeStyle=none;html=1;endArrow=block;verticalAlign=bottom;" value="TworzenieWylotu()">
-          <mxGeometry relative="1" x="-0.0698" y="-20" as="geometry">
+        <mxCell id="m1" edge="1" parent="1" style="edgeStyle=none;html=1;endArrow=block;verticalAlign=bottom;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ui_head" value="&amp;lt;&amp;lt;create&amp;gt;&amp;gt;&amp;nbsp;&lt;div&gt;FormularzWylotu&lt;/div&gt;">
+          <mxGeometry relative="1" y="-30" as="geometry">
             <mxPoint as="offset" />
-            <mxPoint x="80" y="130" as="sourcePoint" />
+            <mxPoint x="80" y="70" as="sourcePoint" />
             <mxPoint x="295" y="130" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -368,6 +368,9 @@
             <mxPoint x="975" y="1600" as="sourcePoint" />
             <mxPoint x="80" y="1600" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="codOUDBGSzmcqXoylM23-1" parent="1" style="shape=umlDestroy;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="285" y="1530" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
